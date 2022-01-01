@@ -1,0 +1,13 @@
+https://marioalvial.medium.com/blindando-sua-api-spring-boot-com-o-padr%C3%A3o-dto-44f97020d1a0
+https://www.devmedia.com.br/diferenca-entre-os-patterns-po-pojo-bo-dto-e-vo/28162
+
+@RestController: Indica que este controller por padrão responderá usando, por padrão, o formato JSON.
+@RequestMapping: Usamos para mapear as urls dos nossos métodos, neste caso, todos os métodos desse controller terão como base o “/usuarios”
+@Autowired: Com essa anotação indicamos que os parâmetros do nosso construtor serão injetados
+@PostMapping: Só mapeamos nosso método salvar. Este método será invocado quando a url: /usuarios, usando o método POST for acessada.
+@RequestBody: Indicamos que o objeto usuario tem que ser buscado no corpo da requisição.
+@Repository: Faz o framework enxergar nossa classe e indicamos que se trata de um repositório, ou seja, uma classe que tem como única função acessar o banco de dados.
+@Service: Usamos esta anotação para que o framework enxergue nossa classe e indicamos que esta classe é um serviço
+@NoArgsContructor: Adiciona um construtor vazio.
+@AllArgsContructor: Cria um construtor privado com todos os atributos. -> @AllArgsConstructor(access = AccessLevel.PRIVATE)
+ResponseEntity<UsuarioRespostaDTO>: Trata o retorno de um método para preparar a resposta.
